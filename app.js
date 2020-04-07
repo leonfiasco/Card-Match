@@ -43,4 +43,11 @@ const unflipCards = () => {
 
 };
 
+(function shuffleCards() {
+    cards.forEach(card => {
+        let randomNum = Math.floor(Math.random() * 12);
+        card.style.order = randomNum;
+    })
+})();
+
 cards.forEach(card => card.addEventListener('click', flipCard))
